@@ -14,7 +14,7 @@ const posts = [
   {
     id: 1,
     author: {
-      avatar_url: 'https://github.com/FelipeDuranl.png',
+      avatarUrl: 'https://github.com/FelipeDuranl.png',
       name: 'Felipe Duran',
       role: 'FrontEnd @Microsoft',
     },
@@ -22,16 +22,13 @@ const posts = [
       {type: 'paragraph', content: 'Fala galeraa 👋'},
       {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
       {type: 'link', content: 'jane.design/doctorcare'},
-      {type: 'link', content: 'jane.design/doctorcare'},
-                
     ],
     publishedAt: new Date('2023-08-11 08:13:00'),
   },
-
   {
     id: 2,
     author: {
-      avatar_url: 'https://github.com/Igor-Gallo.png',
+      avatarUrl: 'https://github.com/Igor-Gallo.png',
       name: 'Igor Gallo',
       role: 'Devops @Google',
     },
@@ -39,10 +36,8 @@ const posts = [
       {type: 'paragraph', content: 'Fala galeraa 👋'},
       {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
       {type: 'link', content: 'jane.design/doctorcare'},
-      {type: 'link', content: 'jane.design/doctorcare'},
-                
     ],
-    publishedAt: new Date('2023-08-15 10:13:00'),
+    publishedAt: new Date('2023-08-29 10:13:00'),
   },
 ];
 
@@ -59,6 +54,7 @@ export function App() {
         {posts.map(post => {
           return (
             <Post 
+              key={post.id}
               author={post.author}
               content={post.content}
               publishedAt={post.publishedAt}
